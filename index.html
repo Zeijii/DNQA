@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>David Natuel | Software Quality Assurance Analyst Portfolio</title>
+    <meta name="description" content="Portfolio of David Natuel, Magna Cum Laude Computer Engineering graduate & QA Analyst specializing in end-to-end testing, Playwright + Python (POM), and complex financial ecosystems.">
+    <meta name="keywords" content="David Natuel, Software QA Analyst, Quality Assurance, Playwright Python, Page Object Model, Automation Testing, Blackfort Consulting, Cebu Pacific Air, Pamantasan ng Lungsod ng Maynila">
+    <meta name="author" content="David Natuel">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://davidnatuel.qa">
+    <meta property="og:title" content="David Natuel | Software Quality Assurance Analyst">
+    <meta property="og:description" content="Magna Cum Laude BS Computer Engineering graduate & QA Specialist in end-to-end automated and manual testing.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS is avoided per instructions; using Vanilla CSS styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-testid="app-body">
+
+    <!-- Sticky Header & Navigation -->
+    <header class="glass-header" data-testid="header">
+        <div class="header-container">
+            <a href="#" class="brand-logo" data-testid="brand-logo">
+                DN<span>.QA()</span>
+            </a>
+            
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" data-testid="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <nav class="nav-menu" data-testid="nav-menu">
+                <ul>
+                    <li><a href="#about" class="nav-link" data-testid="nav-link-about">About</a></li>
+                    <li><a href="#skills" class="nav-link" data-testid="nav-link-skills">Skills</a></li>
+                    <li><a href="#experience" class="nav-link" data-testid="nav-link-experience">Experience</a></li>
+                    <li><a href="#projects" class="nav-link" data-testid="nav-link-projects">Projects</a></li>
+                    <li><a href="#contact" class="nav-link" data-testid="nav-link-contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section (Above the Fold) -->
+        <section id="hero" class="hero-section" data-testid="hero-section">
+            <div class="hero-bg-grid"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge-wrapper" data-testid="hero-badge">
+                        <span class="pulse-dot"></span>
+                        <span class="badge-text">SOFTWARE QA ENGINEER / SDET</span>
+                    </div>
+                    <h1 class="hero-title" data-testid="hero-title">
+                        Engineering <span class="gradient-text">Reliability</span>.<br>
+                        Automating <span class="gradient-text">Quality</span>.
+                    </h1>
+                    <p class="hero-subtitle" data-testid="hero-subtitle">
+                        <strong>David Natuel</strong> | Specialized in end-to-end manual and automated testing for complex financial, payroll, and backend ecosystems. Computer Engineering roots applied to absolute system integrity.
+                    </p>
+                    <div class="hero-actions" data-testid="hero-actions">
+                        <a href="#projects" class="btn btn-primary" data-testid="hero-cta-projects">
+                            Explore Work
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary" data-testid="hero-cta-contact">
+                            Get In Touch / CV
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual" data-testid="hero-visual">
+                    <!-- Premium Automated QA Pipeline Graphic -->
+                    <div class="pipeline-card glass-panel" data-testid="pipeline-card">
+                        <div class="pipeline-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="pipeline-title">playwright_python_runner.py</span>
+                        </div>
+                        <div class="pipeline-body">
+                            <div class="terminal-line"><span class="cmd-prompt">$</span> pytest --v -s tests/automation_pipeline.py</div>
+                            <div class="pipeline-flow">
+                                <div class="flow-step step-pass" id="step-auth">
+                                    <div class="step-status">✓</div>
+                                    <div class="step-details">
+                                        <span class="step-name">API Auth Verify</span>
+                                        <span class="step-time">0.12s</span>
+                                    </div>
+                                </div>
+                                <div class="flow-step step-pass" id="step-db">
+                                    <div class="step-status">✓</div>
+                                    <div class="step-details">
+                                        <span class="step-name">Ledger Integrity</span>
+                                        <span class="step-time">0.45s</span>
+                                    </div>
+                                </div>
+                                <div class="flow-step step-running" id="step-ui">
+                                    <div class="step-status-spinner"></div>
+                                    <div class="step-details">
+                                        <span class="step-name">POM Functional UI</span>
+                                        <span class="step-time">Running...</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pipeline-radar">
+                                <svg class="radar-svg" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="45" class="radar-grid" />
+                                    <circle cx="50" cy="50" r="30" class="radar-grid" />
+                                    <circle cx="50" cy="50" r="15" class="radar-grid" />
+                                    <line x1="50" y1="5" x2="50" y2="95" class="radar-grid-line" />
+                                    <line x1="5" y1="50" x2="95" y2="50" class="radar-grid-line" />
+                                    <line x1="50" y1="50" x2="85" y2="15" class="radar-sweep" />
+                                    <circle cx="75" cy="25" r="3" class="radar-blip" />
+                                </svg>
+                                <div class="radar-labels">
+                                    <div class="radar-stat"><span class="green-text">ASSERTIONS:</span> 142/142 Passed</div>
+                                    <div class="radar-stat"><span class="blue-text">TEST ENGINE:</span> Python 3.11</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-scroll-indicator">
+                <a href="#about" aria-label="Scroll to About Section">
+                    <span class="mouse-icon">
+                        <span class="mouse-wheel"></span>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Career Snapshot / About -->
+        <section id="about" class="about-section scroll-reveal" data-testid="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">01 //</span>
+                    <h2>Career Snapshot</h2>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-story">
+                        <h3 data-testid="about-heading">Fusing Computer Engineering Rigor with Quality Analysis</h3>
+                        <p data-testid="about-description">
+                            As a <strong>Magna Cum Laude BS Computer Engineering</strong> graduate from the prestigious <strong>Pamantasan ng Lungsod ng Maynila</strong>, I approach software quality assurance from an engineering perspective. I don't just find bugs; I systematically analyze why they occur, dissect backend layers, and construct robust, automated architectures to prevent regression.
+                        </p>
+                        <p>
+                            My professional track record focuses heavily on maintaining data integrity and ensuring seamless deployments across web, mobile, and complex backend platforms. I specialize in developing Page Object Model (POM) automation pipelines, functional workflows, and securing mission-critical operational systems.
+                        </p>
+                        <div class="about-credentials">
+                            <div class="credential-item">
+                                <span class="cred-icon">🎓</span>
+                                <div class="cred-info">
+                                    <strong>BS Computer Engineering</strong>
+                                    <span>PLM | Magna Cum Laude Honors</span>
+                                </div>
+                            </div>
+                            <div class="credential-item">
+                                <span class="cred-icon">🏢</span>
+                                <div class="cred-info">
+                                    <strong>Mid Software Quality Assurance Analyst</strong>
+                                    <span>Blackfort Consulting (Remote)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-metrics" data-testid="kpi-cards">
+                        <!-- Card 1 -->
+                        <div class="metric-card glass-panel" data-testid="kpi-coverage">
+                            <div class="metric-value">99.8%</div>
+                            <div class="metric-title">Test Suite Coverage</div>
+                            <p class="metric-desc">
+                                Achieved through scalable Page Object Model (POM) automation suites and rigorous boundary value manual execution.
+                            </p>
+                        </div>
+                        
+                        <!-- Card 2 -->
+                        <div class="metric-card glass-panel" data-testid="kpi-defects">
+                            <div class="metric-value">0-Defect</div>
+                            <div class="metric-title">Production Deployments</div>
+                            <p class="metric-desc">
+                                Maintained through continuous integration smoke runs and strict regression testing passes for critical accounting and aviation booking logic.
+                            </p>
+                        </div>
+                        
+                        <!-- Card 3 -->
+                        <div class="metric-card glass-panel" data-testid="kpi-apis">
+                            <div class="metric-value">100%</div>
+                            <div class="metric-title">API Verification Rate</div>
+                            <p class="metric-desc">
+                                Developed robust collections with automated Postman checkpoints to secure complex payroll and CMS transaction layers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Technical Stack Section -->
+        <section id="skills" class="skills-section scroll-reveal" data-testid="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">02 //</span>
+                    <h2>Technical Stack Matrix</h2>
+                </div>
+                
+                <!-- Skill Interactive Filters -->
+                <div class="skills-filter-container" data-testid="skills-filters">
+                    <button class="filter-btn active" data-filter="all">All Specs</button>
+                    <button class="filter-btn" data-filter="automation">Automation & API</button>
+                    <button class="filter-btn" data-filter="competencies">Competencies</button>
+                    <button class="filter-btn" data-filter="tools">Tools & CMS</button>
+                    <button class="filter-btn" data-filter="methodologies">Methodologies</button>
+                </div>
+
+                <div class="skills-grid" data-testid="skills-grid">
+                    <!-- Category 1: Automation & API -->
+                    <div class="skills-card glass-panel" data-category="automation" data-testid="skills-card-automation">
+                        <div class="card-icon-wrapper">
+                            <svg class="skill-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                            <h3>Automation & API</h3>
+                        </div>
+                        <div class="skill-badges">
+                            <span class="badge badge-blue">Playwright</span>
+                            <span class="badge badge-blue">Python (POM)</span>
+                            <span class="badge badge-blue">Postman API Testing</span>
+                            <span class="badge badge-blue">REST API Testing</span>
+                            <span class="badge badge-blue">Assertion Libraries</span>
+                            <span class="badge badge-blue">CI/CD Smoke Pipelines</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Testing Competencies -->
+                    <div class="skills-card glass-panel" data-category="competencies" data-testid="skills-card-competencies">
+                        <div class="card-icon-wrapper">
+                            <svg class="skill-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="22" y1="12" x2="18" y2="12"></line>
+                                <line x1="6" y1="12" x2="2" y2="12"></line>
+                                <line x1="12" y1="6" x2="12" y2="2"></line>
+                                <line x1="12" y1="22" x2="12" y2="18"></line>
+                            </svg>
+                            <h3>Testing Competencies</h3>
+                        </div>
+                        <div class="skill-badges">
+                            <span class="badge badge-indigo">Regression Testing</span>
+                            <span class="badge badge-indigo">Functional Testing</span>
+                            <span class="badge badge-indigo">User Acceptance (UAT)</span>
+                            <span class="badge badge-indigo">Integration Testing</span>
+                            <span class="badge badge-indigo">Mobile App Testing</span>
+                            <span class="badge badge-indigo">Bug & Defect Lifecycle</span>
+                            <span class="badge badge-indigo">Requirement Analysis</span>
+                            <span class="badge badge-indigo">Boundary Value Analysis</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Tools & Frameworks -->
+                    <div class="skills-card glass-panel" data-category="tools" data-testid="skills-card-tools">
+                        <div class="card-icon-wrapper">
+                            <svg class="skill-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                            </svg>
+                            <h3>Tools & CMS</h3>
+                        </div>
+                        <div class="skill-badges">
+                            <span class="badge badge-indigo">QASE TCM</span>
+                            <span class="badge badge-indigo">Azure DevOps</span>
+                            <span class="badge badge-indigo">Strapi CMS</span>
+                            <span class="badge badge-indigo">Jira / Confluence</span>
+                            <span class="badge badge-indigo">Git / GitHub</span>
+                            <span class="badge badge-indigo">Charles Proxy</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 4: Methodologies -->
+                    <div class="skills-card glass-panel" data-category="methodologies" data-testid="skills-card-methodologies">
+                        <div class="card-icon-wrapper">
+                            <svg class="skill-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <h3>Methodologies</h3>
+                        </div>
+                        <div class="skill-badges">
+                            <span class="badge badge-blue">Agile Testing</span>
+                            <span class="badge badge-blue">Scrum Framework</span>
+                            <span class="badge badge-blue">Sprint Planning</span>
+                            <span class="badge badge-blue">Daily Standups</span>
+                            <span class="badge badge-blue">Retrospectives</span>
+                            <span class="badge badge-blue">Shift-Left Testing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience Timeline -->
+        <section id="experience" class="experience-section scroll-reveal" data-testid="experience-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">03 //</span>
+                    <h2>Professional Timeline</h2>
+                </div>
+                
+                <div class="timeline-container">
+                    <!-- Ongoing General Role at Blackfort -->
+                    <div class="timeline-item glass-panel" data-testid="experience-card-current">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Nov 2023 - Present</span>
+                            <span class="timeline-location">Remote</span>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="role-company-wrapper">
+                                <h3 class="role-title">Mid Software Quality Assurance Analyst</h3>
+                                <div class="company-badge">Blackfort Consulting</div>
+                            </div>
+                            <p class="role-summary">
+                                Spearheading quality assurance and testing engineering across multiple high-impact projects. Validating financial systems, corporate HR platforms, and CMS-driven architectures to enforce absolute data integrity and clean production rollouts.
+                            </p>
+                            <ul class="role-bullets">
+                                <li>Design and execute comprehensive manual and automated end-to-end testing strategies for mobile (Android/iOS) and web applications (e.g., CAEMC Financial Mobile App).</li>
+                                <li>Validate complex mathematical computations, real-time ledgers, interest calculations, and shift-scheduling/payroll algorithms to eliminate financial drift.</li>
+                                <li>Configure and maintain robust web automation pipelines using Playwright + Python structured inside strict Page Object Model (POM) frameworks.</li>
+                                <li>Test localized APIs and Role-Based Access Controls (RBAC) across Content Management Systems (Strapi CMS) to secure administrative interfaces.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tag">Playwright</span>
+                                <span class="tag">Python (POM)</span>
+                                <span class="tag">Strapi CMS</span>
+                                <span class="tag">Mobile Testing</span>
+                                <span class="tag">API Verification</span>
+                                <span class="tag">Financial Ledgers</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Completed Cebu Pacific Air Assignment -->
+                    <div class="timeline-item glass-panel" data-testid="experience-card-ceb">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Nov 2023 - May 2025</span>
+                            <span class="timeline-location">Remote</span>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="role-company-wrapper">
+                                <h3 class="role-title">Quality Assurance Analyst IT Consultant</h3>
+                                <div class="company-badge">Blackfort Consulting</div>
+                            </div>
+                            <div class="client-support">
+                                <span>Client Supported:</span> <strong>Cebu Pacific Air</strong>
+                            </div>
+                            <p class="role-summary">
+                                Delivered rigorous software quality assurance validation for Cebu Pacific Air's high-traffic booking, ticketing, and operational management systems under strict Agile/Scrum timelines.
+                            </p>
+                            <ul class="role-bullets">
+                                <li>Develop and execute comprehensive test cases to validate booking and expense management processes, including functional, regression, and integration testing.</li>
+                                <li>Collaborate with cross-functional teams to identify and resolve defects, ensuring seamless deployment of system features.</li>
+                                <li>Provide detailed testing documentation and reports to support informed decision-making and continuous improvement.</li>
+                                <li>Contribute to refining QA processes, improving efficiency, and ensuring high-quality deliverables aligned with project timelines.</li>
+                                <li>Actively participate in Scrum meetings including daily stand-ups, sprint planning, and retrospectives.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tag">Booking & Expense</span>
+                                <span class="tag">Integration Testing</span>
+                                <span class="tag">Regression Testing</span>
+                                <span class="tag">Scrum / Agile</span>
+                                <span class="tag">Postman</span>
+                                <span class="tag">QASE TCM</span>
+                                <span class="tag">Azure DevOps</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="projects-section scroll-reveal" data-testid="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">04 //</span>
+                    <h2>Featured Projects</h2>
+                </div>
+
+                <div class="projects-grid" data-testid="projects-grid">
+                    <!-- Project Card 1: CAEMC -->
+                    <div class="project-card glass-panel" data-testid="project-card-caemc">
+                        <div class="project-visual">
+                            <!-- SVG mockup of a financial mobile app interface -->
+                            <svg class="project-svg" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#1e3a8a" />
+                                        <stop offset="100%" stop-color="#3b82f6" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="200" height="120" rx="8" fill="#111827" stroke="rgba(255,255,255,0.05)" />
+                                <!-- Phone outline -->
+                                <rect x="75" y="10" width="50" height="100" rx="6" fill="url(#blueGrad)" stroke="rgba(255,255,255,0.15)" />
+                                <rect x="79" y="18" width="42" height="82" rx="3" fill="#0f172a" />
+                                <!-- Phone notch -->
+                                <rect x="92" y="12" width="16" height="4" rx="2" fill="#111827" />
+                                <!-- Chart graphics inside screen -->
+                                <circle cx="100" cy="40" r="14" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="3" />
+                                <circle cx="100" cy="40" r="14" fill="none" stroke="#60a5fa" stroke-width="3" stroke-dasharray="60 30" />
+                                <text x="100" y="43" font-size="8" fill="#fff" text-anchor="middle" font-family="Outfit">₱</text>
+                                <!-- Balance list representation -->
+                                <rect x="84" y="62" width="32" height="6" rx="2" fill="#1e293b" />
+                                <rect x="84" y="72" width="32" height="6" rx="2" fill="#1e293b" />
+                                <circle cx="110" cy="65" r="2" fill="#10b981" />
+                                <circle cx="110" cy="75" r="2" fill="#10b981" />
+                            </svg>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="proj-tag">Mobile Testing</span>
+                                <span class="proj-tag">Strapi CMS</span>
+                                <span class="proj-tag">Data Integrity Validation</span>
+                            </div>
+                            <h3 class="project-title">CAEMC Mobile App</h3>
+                            <p class="project-summary">
+                                Provided end-to-end, multi-tier QA coverage across the native Android/iOS mobile application, Backoffice portals, and CMS-connected marketing website.
+                            </p>
+                            <ul class="project-bullets">
+                                <li>Validated complex real-time financial flows (savings display, paid-up share capital, loans, time deposits) preventing calculations drift.</li>
+                                <li>Tested localized API integrity and data consistency layers integrated across Strapi CMS layers up to active production environments.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2: BCI Timesheet -->
+                    <div class="project-card glass-panel" data-testid="project-card-timesheet">
+                        <div class="project-visual">
+                            <!-- SVG mockup of a timesheet workflow dashboard -->
+                            <svg class="project-svg" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="indigoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#312e81" />
+                                        <stop offset="100%" stop-color="#6366f1" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="200" height="120" rx="8" fill="#111827" stroke="rgba(255,255,255,0.05)" />
+                                <!-- Dashboard Grid -->
+                                <rect x="15" y="15" width="170" height="90" rx="4" fill="url(#indigoGrad)" opacity="0.4" />
+                                <rect x="22" y="25" width="70" height="30" rx="3" fill="#0f172a" />
+                                <rect x="98" y="25" width="80" height="30" rx="3" fill="#0f172a" />
+                                <rect x="22" y="62" width="156" height="32" rx="3" fill="#0f172a" />
+                                <!-- Checkmarks -->
+                                <path d="M30 40 l3 3 l6-6" fill="none" stroke="#10b981" stroke-width="1.5" />
+                                <path d="M106 40 l3 3 l6-6" fill="none" stroke="#10b981" stroke-width="1.5" />
+                                <text x="43" y="42" font-size="6" fill="#9ca3af" font-family="Outfit">User Approval</text>
+                                <text x="119" y="42" font-size="6" fill="#9ca3af" font-family="Outfit">Admin Approved</text>
+                                <!-- Flow chart connectors -->
+                                <line x1="92" y1="40" x2="98" y2="40" stroke="#6366f1" stroke-width="1" stroke-dasharray="2 2" />
+                            </svg>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="proj-tag">HR Operations</span>
+                                <span class="proj-tag">RBAC Verification</span>
+                                <span class="proj-tag">Mathematical Computations</span>
+                            </div>
+                            <h3 class="project-title">BCI Timesheet & Payroll System</h3>
+                            <p class="project-summary">
+                                Conducted extensive verification loops across the internal corporate HR platform, covering complex shift-scheduling, attendance, leave requests, and payroll calculators.
+                            </p>
+                            <ul class="project-bullets">
+                                <li>Validated multi-role approval workflows (User, Manager, and Admin Role-Based Access Controls) to ensure data confidentiality and flow containment.</li>
+                                <li>Asserted complex calculations to secure accurate financial transactions, analyzing edge cases for overtime computation rates under extreme calendar structures.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3: BCI Accounting -->
+                    <div class="project-card glass-panel" data-testid="project-card-accounting">
+                        <div class="project-visual">
+                            <!-- SVG mockup representing automated code running assertions -->
+                            <svg class="project-svg" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="200" height="120" rx="8" fill="#0b0f19" stroke="rgba(255,255,255,0.05)" />
+                                <!-- Window wrapper -->
+                                <rect x="15" y="10" width="170" height="100" rx="4" fill="#111827" stroke="rgba(59,130,246,0.15)" stroke-width="1" />
+                                <!-- Title tab -->
+                                <rect x="15" y="10" width="170" height="15" rx="4" fill="#1f2937" />
+                                <circle cx="25" cy="18" r="2.5" fill="#ef4444" />
+                                <circle cx="32" cy="18" r="2.5" fill="#f59e0b" />
+                                <circle cx="39" cy="18" r="2.5" fill="#10b981" />
+                                <text x="50" y="21" font-size="5" fill="#9ca3af" font-family="Space Mono">Playwright Console</text>
+                                <!-- Fake code list -->
+                                <text x="25" y="42" font-size="6" fill="#38bdf8" font-family="Space Mono">def test_double_entry_balance():</text>
+                                <text x="35" y="54" font-size="6" fill="#a7f3d0" font-family="Space Mono">page = AccountingPOM(browser)</text>
+                                <text x="35" y="66" font-size="6" fill="#a7f3d0" font-family="Space Mono">page.ledger.verify_balance(debit, credit)</text>
+                                <text x="35" y="78" font-size="6" fill="#34d399" font-family="Space Mono">assert page.status_code == 200</text>
+                                <!-- Big green success badge -->
+                                <rect x="25" y="88" width="150" height="15" rx="3" fill="rgba(16,185,129,0.08)" stroke="rgba(16,185,129,0.2)" />
+                                <text x="30" y="98" font-size="6" fill="#10b981" font-family="Space Mono">✓ 1 passed in 1.48s (Playwright POM Automation)</text>
+                            </svg>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="proj-tag">Playwright</span>
+                                <span class="proj-tag">Python (POM)</span>
+                                <span class="proj-tag">Double-Entry Verification</span>
+                            </div>
+                            <h3 class="project-title">BCI Accounting System</h3>
+                            <p class="project-summary">
+                                Led automated validation modules for a sophisticated enterprise double-entry accounting software, ensuring error-free ledger allocations.
+                            </p>
+                            <ul class="project-bullets">
+                                <li>Validated transaction mapping arrays, general ledgers, and subsidiary accounting frameworks preventing balance discrepancies.</li>
+                                <li>Designed and deployed highly robust regression suites using Playwright + Python structured inside strict Page Object Model (POM) architectures.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / Contact Section -->
+        <section id="contact" class="contact-section scroll-reveal" data-testid="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">05 //</span>
+                    <h2>Secure Contact Hub</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info-panel">
+                        <h3 data-testid="contact-heading">Let's Discuss Reliability</h3>
+                        <p class="contact-pitch">
+                            Looking to scale up your software automated pipeline coverage or secure your upcoming mobile/web deployments with QA expertise? Get in touch to review how my Computer Engineering foundations can bring maximum stability to your team.
+                        </p>
+                        
+                        <div class="contact-methods">
+                            <div class="method-item" data-testid="contact-method-location">
+                                <svg class="method-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <div class="method-details">
+                                    <span class="method-label">Location</span>
+                                    <span class="method-value">Makati City, Philippines</span>
+                                </div>
+                            </div>
+                            
+                            <a href="mailto:engr.dnatuel@gmail.com" class="method-item" data-testid="contact-method-email">
+                                <svg class="method-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <div class="method-details">
+                                    <span class="method-label">Email</span>
+                                    <span class="method-value">engr.dnatuel@gmail.com</span>
+                                </div>
+                            </a>
+                            
+                            <a href="https://linkedin.com/in/davidnatuel" target="_blank" rel="noopener noreferrer" class="method-item" data-testid="contact-method-linkedin">
+                                <svg class="method-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                                <div class="method-details">
+                                    <span class="method-label">LinkedIn</span>
+                                    <span class="method-value">David Natuel</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-panel glass-panel" data-testid="contact-form-panel">
+                        <form id="contact-form" novalidate data-testid="contact-form">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Jane Doe" data-testid="contact-name">
+                                <span class="error-msg" id="name-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="jane.doe@organization.com" data-testid="contact-email">
+                                <span class="error-msg" id="email-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required placeholder="QA Pipeline Consultation" data-testid="contact-subject">
+                                <span class="error-msg" id="subject-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required rows="5" placeholder="Let's align on automated quality assurance goals..." data-testid="contact-message"></textarea>
+                                <span class="error-msg" id="message-error"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn" data-testid="contact-submit">
+                                <span class="submit-text">Transmit Request</span>
+                                <span class="submit-spinner hidden"></span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Area -->
+    <footer class="footer-hub" data-testid="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                DN<span>.QA()</span>
+            </div>
+            
+            <!-- Explicit QA Automation Ready Badge -->
+            <div class="qa-badge" data-testid="qa-badge">
+                <div class="qa-badge-icon">🧪</div>
+                <div class="qa-badge-text">
+                    This site is fully optimized for automated end-to-end testing with semantic <code>data-testid</code> properties.
+                </div>
+            </div>
+            
+            <div class="footer-copyright">
+                &copy; 2026 David Natuel. All Rights Reserved. Built with high-performance CSS and optimized architecture.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
